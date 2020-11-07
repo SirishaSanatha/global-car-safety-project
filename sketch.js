@@ -57,6 +57,7 @@ function draw() {
 
 		ambulance.visible= true;
 
+        text ("deformation : "+deformation,400,350);
 		
 	}
 
@@ -76,7 +77,29 @@ function draw() {
   }  
   
   drawSprites();
- 
+  if(deformation>180)
+  {
+	  fill ("Black");
+	  textSize(30);
+	text ("deformation : "+deformation,450,350);  
+	fill("red");
+	text("LETHAL",960,350);
+  }
+  if(deformation<180 && deformation>100)
+	{
+		fill ("Black");
+	  textSize(30);
+		text ("deformation : "+deformation,400,350);
+		fill("yellow")
+		text("AVERAGE",900,350);
+	}
+	if(deformation<100){
+		fill ("Black");
+	  textSize(30);
+		text ("deformation : "+deformation,400,350);
+		fill("green");
+		text("GOOD",900,350);
+	}
 }
 
 
